@@ -1,5 +1,7 @@
 # TowerCalc
-
+A combat simulation and DPS calculator for Anime World Tower Defense.  
+Designed for theorycrafting, optimization, and analyzing complex passive and leader skill interactions.
+---
 ## Features
 
 - Accurate DPS calculations
@@ -37,7 +39,31 @@ This project aims to provide a transparent and flexible damage calculation engin
 - Web or GUI interface
 
 - Data import/export tools
+---
+## 📖 Usage Example
 
+Below is a conceptual example of how the calculator will be used:
+
+```python
+from awtd_combat_sim import Unit, LeaderSkill, calculate_dps
+
+gojo = Unit(
+    name="Gojo",
+    base_damage=12000,
+    attack_speed=1.5,
+    placements=3,
+    passive="Void"
+)
+
+leader = LeaderSkill(
+    category="Sorcerer",
+    damage_bonus=0.25  # 25% damage boost
+)
+
+dps = calculate_dps(unit=gojo, leader_skill=leader)
+
+print(f"Total DPS: {dps}")
+```
 ## 📦 Installation
 ```bash
 git clone https://github.com/yourusername/AWTD-Combat-Sim.git
